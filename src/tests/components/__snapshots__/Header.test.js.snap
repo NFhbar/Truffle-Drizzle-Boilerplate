@@ -11,7 +11,7 @@ exports[`should render Header 1`] = `
       className="card-title"
       id="header-title"
     >
-      Camino Financial React App
+      Store React App
     </h1>
     <div
       className="row"

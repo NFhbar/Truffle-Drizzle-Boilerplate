@@ -5,7 +5,7 @@ import { row, column } from 'reactstrap';
 const Header = () => (
   <div className="row card-header">
     <div className="col-sm-12">
-        <h1 className="card-title" id="header-title">Camino Financial React App</h1>
+        <h1 className="card-title" id="header-title">Store React App</h1>
         <div className="row">
           <div className="col-md-4">
             <NavLink to="/" className="btn btn-primary" activeClassName="is-active" exact={true}>Dashboard</NavLink>
