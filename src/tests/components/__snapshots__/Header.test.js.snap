@@ -11,49 +11,17 @@ exports[`should render Header 1`] = `
       className="card-title"
       id="header-title"
     >
-      Store React App
+      My App
     </h1>
-    <div
-      className="row"
+    <NavLink
+      activeClassName="is-active"
+      ariaCurrent="true"
+      className="btn btn-primary"
+      exact={true}
+      to="/"
     >
-      <div
-        className="col-md-4"
-      >
-        <NavLink
-          activeClassName="is-active"
-          ariaCurrent="true"
-          className="btn btn-primary"
-          exact={true}
-          to="/"
-        >
-          Dashboard
-        </NavLink>
-      </div>
-      <div
-        className="col-md-4"
-      >
-        <NavLink
-          activeClassName="is-active"
-          ariaCurrent="true"
-          className="btn btn-primary"
-          to="/create"
-        >
-          Add Item
-        </NavLink>
-      </div>
-      <div
-        className="col-md-4"
-      >
-        <NavLink
-          activeClassName="is-active"
-          ariaCurrent="true"
-          className="btn btn-primary"
-          to="/about"
-        >
-          About
-        </NavLink>
-      </div>
-    </div>
+      Dashboard
+    </NavLink>
   </div>
 </div>
 `;

@@ -5,5 +5,8 @@
   ],
   "snapshotSerializers": [
     "enzyme-to-json/serializer"
+  ],
+  "testPathIgnorePatterns": [
+    "<rootDir>[/\\\\](build|node_modules|test)[/\\\\]"
   ]
 }

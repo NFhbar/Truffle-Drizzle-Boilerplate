@@ -1,27 +1,51 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
-import AppRouter from './routers/AppRouter';
-import configureStore from './store/configureStore';
-import { startSetItems } from './actions/items';
-import { setTextFilter } from './actions/filters';
-import getVisibleItems from './selectors/items';
-import 'bootstrap/dist/css/bootstrap.css';
-import 'normalize.css/normalize.css';
-import './styles/styles.scss';
-import './firebase/firebase';
-import LoadingPage from './components/LoadingPage';
+//React
+import React from 'react'
+import ReactDOM from 'react-dom'
+//Providers
+import { Provider } from 'react-redux'
+import { DrizzleProvider } from 'drizzle-react'
+//Router
+import AppRouter from './routers/AppRouter'
+//Store
+import configureStore from './store/configureStore'
+//Styles
+import 'bootstrap/dist/css/bootstrap.css'
+import 'normalize.css/normalize.css'
+import './styles/styles.scss'
+import './firebase/firebase'
+import LoadingPage from './components/LoadingPage'
+//Contracts
+import SimpleStorage from '../build/contracts/SimpleStorage.json'
 
-const store = configureStore();
+
+//Configure Store
+const store = configureStore()
+
+// Set Drizzle options.
+const options = {
+  web3: {
+    block: false,
+    fallback: {
+      type: 'ws',
+      url: 'ws://127.0.0.1:8545'
+    }
+  },
+  contracts: [
+    SimpleStorage
+  ],
+  events: {
+    StorageSet: ['_message']
+  }
+}
 
 const jsx = (
-  <Provider store={store}>
-    <AppRouter />
-  </Provider>
-);
+  <DrizzleProvider options={options}>
+    <Provider store={store}>
+      <LoadingPage>
+        <AppRouter />
+      </LoadingPage>
+    </Provider>
+  </DrizzleProvider>
+)
 
-ReactDOM.render(<LoadingPage />, document.getElementById('app'));
-
-store.dispatch(startSetItems()).then(() => {
-  ReactDOM.render(jsx, document.getElementById('app'));
-});
+ReactDOM.render(jsx, document.getElementById('app'))
