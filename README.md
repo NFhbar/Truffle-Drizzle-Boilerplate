@@ -1,4 +1,12 @@
 # Truffle Drizzle React Boilerplate
+
+<div>
+
+[![Build Status](https://travis-ci.org/NFhbar/Truffle-Drizzle-Boilerplate.png?branch=master)](https://travis-ci.org/NFhbar/Truffle-Drizzle-Boilerplate)
+[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/dwyl/esta/issues)
+
+</div>
+
 This boiler plate is based on [Truffle Drizzle](http://truffleframework.com/blog/drizzle-reactive-ethereum-data-for-front-ends) implementation
 for React. It includes webpack, jest, and several other additions to improve dev experience.
 
