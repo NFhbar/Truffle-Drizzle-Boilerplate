@@ -3,7 +3,7 @@
 <div>
 
 [![Build Status](https://travis-ci.org/NFhbar/Truffle-Drizzle-Boilerplate.png?branch=master)](https://travis-ci.org/NFhbar/Truffle-Drizzle-Boilerplate)
-[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/dwyl/esta/issues)
+[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/NFhbar/Truffle-Drizzle-Boilerplate/issues)
 
 </div>
 
